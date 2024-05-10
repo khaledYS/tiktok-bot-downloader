@@ -1,0 +1,25 @@
+{
+  "name": "tiktok-downloader-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "netlify": "netlify dev",
+    "ngrok": "ngrok http 8888",
+    "verify": "ngrok update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "btch-downloader": "^2.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "netlify-cli": "^17.23.2",
+    "node-ngrok-cli": "^0.0.2",
+    "serverless-http": "^3.2.0",
+    "telegraf": "^4.16.3"
+  }
+}
