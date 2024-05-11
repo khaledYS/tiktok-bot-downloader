@@ -31,7 +31,6 @@ bot.on("message", onlyJoined(async (ctx) => {
     if (body.test(url)) {
         try {
             const data = await ttdl(url);
-            console.log(data)
             const audio = data.audio[0]
             const { title, title_audio } = data;
             await ctx.sendVideo(data.video[0], {chat_id: From, caption: title });
