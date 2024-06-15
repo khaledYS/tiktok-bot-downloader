@@ -6,13 +6,14 @@ const chnl_token = process.env.CHNL;
 const bot = new Telegraf(token);
 const joiningMessage = "Please Join our Channel first 🤍🤍 \n انضم الى قنات البوت اولاً 🤍🤍\n \n - https://t.me/gkcl_store \n - https://t.me/gkcl_store"
 const onlyJoined = (callback) => async (ctx) => {
-    const client_id = ctx.update.message.from.id;
+    /** const client_id = ctx.update.message.from.id;
     const res = await ctx.telegram.getChatMember(chnl_token, client_id);
     if (res.status === "left") {
         ctx.sendMessage(joiningMessage, { chat_id: client_id })
     } else {
         await callback(ctx)
-    }
+    }**/
+        await callback(ctx)
 }
 // Start command
 bot.command("start", onlyJoined((ctx) => {
